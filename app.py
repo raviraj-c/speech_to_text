@@ -1,10 +1,9 @@
 import streamlit as st
 import azure.cognitiveservices.speech as speechsdk
-import time
 
 # Azure Speech configuration
-speech_key = "ae7465dd86834f55bc4f377ea902b18c"  # Add your Azure Speech key here
-service_region = "centralindia"  # Add your Azure Speech region here
+speech_key = st.secrets["azure"]["speech_key"]
+service_region = st.secrets["azure"]["service_region"]
 
 def get_speech_config(language):
     speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
@@ -28,7 +27,7 @@ def recognize_speech(language):
     elif result.reason == speechsdk.ResultReason.Canceled:
         return f"Speech recognition canceled for {language}"
 
-st.title("Real-time Speech-to-Text")
+st.title("Bilingual Real-time Speech-to-Text")
 
 if 'text_output' not in st.session_state:
     st.session_state.text_output = []
