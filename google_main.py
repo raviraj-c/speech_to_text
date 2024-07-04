@@ -4,7 +4,7 @@ from google.cloud import speech
 import pyaudio
 
 # Set your Google Cloud credentials
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "path/to/your/google-credentials.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./ecommerce-cv.json"
 
 
 

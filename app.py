@@ -2,8 +2,8 @@ import streamlit as st
 import azure.cognitiveservices.speech as speechsdk
 
 # Azure Speech configuration
-speech_key = st.secrets["azure"]["speech_key"]
-service_region = st.secrets["azure"]["service_region"]
+speech_key = st.secrets["azure_key"]
+service_region = st.secrets["azure_service_region"]
 
 def get_speech_config(language):
     speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)

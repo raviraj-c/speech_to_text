@@ -4,7 +4,7 @@ import time
 def azure_speech_to_text():
     # Replace with your own subscription key and region
     speech_key = "ae7465dd86834f55bc4f377ea902b18c"
-    service_region = "YOUR_AZURE_REGION"
+    service_region = "centralindia"
 
     # Create speech configuration
     speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
